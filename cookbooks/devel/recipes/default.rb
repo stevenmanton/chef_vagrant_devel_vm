@@ -8,5 +8,13 @@
 #
 
 package "subversion" do
-	action :install
+    action :install
+end
+
+template "ssh_config" do
+  path "/home/vagrant/.ssh/config"
+  source "ssh_config.erb"
+  owner "vagrant"
+  group "vagrant"
+  mode "0600"
 end
