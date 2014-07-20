@@ -93,7 +93,8 @@ config.vm.network :private_network, ip: "33.33.33.10"
 
     chef.run_list = [
       "recipe[git::default]",
-      "recipe[java]"
+      "recipe[java]",
+      "recipe[devel]"
     ]
   end
 end
