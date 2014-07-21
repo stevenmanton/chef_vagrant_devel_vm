@@ -11,6 +11,11 @@ package "subversion" do
     action :install
 end
 
+apt_package "ubuntu-desktop" do
+    action :install
+    options "--no-install-recommends"
+end
+
 template "ssh_config" do
   path "/home/vagrant/.ssh/config"
   source "ssh_config.erb"
