@@ -1,7 +1,7 @@
-To get started, first install Chef-DK. Then, I used [Berkshelf](http://berkshelf.com/) to initialize the directory so it can manage 3rd party cookbooks. It's also helpful to install the corresponding vagrant-berkshelf plugin:
-
+To get started, first install [VirtualBox](https://www.virtualbox.org/), [Vagrant](http://www.vagrantup.com/), and [Chef-DK](http://downloads.getchef.com/chef-dk). Next, install a few Vagrant plugins that will make your life easier:
 ```
+vagrant plugin install vagrant-omnibus
 vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1
+vagrant plugin install vagrant-vbguest
 ```
-
-Also, install the vagrant-omnibus plugin so that the guest VM has the most up-do-date version of Chef.
+The omnibus plugin will insure that the latest version of Chef is installed on the guest VM. Berkshelf, which comes bundled with Chef-DK, is helpful for managing 3rd party cookbooks that you'll be using. Finally, the VBGuest plugin takes care of installing the Guest Additions for VirtualBox.
